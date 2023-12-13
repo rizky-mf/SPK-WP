@@ -1,27 +1,27 @@
 import create from "zustand";
 import dataset from "@/data/dataset";
-import { River } from "type";
+import { Datas } from "type";
 
 type UseDatasetProps = {
-  rivers: River[];
-  push: (river: Omit<River, "no">) => void;
+  datas: Datas[];
+  push: (data: Omit<Datas, "no">) => void;
 };
 
 const useDataset = create<UseDatasetProps>((set) => {
   return {
-    rivers: dataset,
-    push: (river) => {
+    datas: dataset,
+    push: (data) => {
       set((store) => {
-        const newRivers = store.rivers.map((item, idx) => ({
+        const newDatas = store.datas.map((item, idx) => ({
           ...item,
           no: idx + 1,
         }));
 
-        const lastNum = newRivers[newRivers.length - 1].no;
-        newRivers.push({ ...river, no: lastNum + 1 });
+        const lastNum = newDatas[newDatas.length - 1].no;
+        newDatas.push({ ...data, no: lastNum + 1 });
 
         return {
-          rivers: newRivers,
+          datas: newDatas,
         };
       });
     },

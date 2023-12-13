@@ -9,7 +9,7 @@ import useDataset from "@/store/use-dataset";
 
 const DatasetPage = () => {
   const [isModalShow, modalController] = useBoolean(false);
-  const dataset = useDataset((store) => store.rivers);
+  const dataset = useDataset((store) => store.datas);
   useTitlePage("Dataset");
 
   return (

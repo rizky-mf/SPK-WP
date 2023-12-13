@@ -1,7 +1,7 @@
 import { Column } from "react-table";
-import { River } from "type";
+import { Datas } from "type";
 
-const datasetColumns: ReadonlyArray<Column<River>> = [
+const datasetColumns: ReadonlyArray<Column<Datas>> = [
   {
     Header: "No",
     accessor: "no",

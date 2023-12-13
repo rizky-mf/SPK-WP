@@ -2,16 +2,16 @@ import {
     calculateWeightColumns,
     WeightDataProps,
     normalizeDataColumns,
-    RankRiverDataProps,
-    rankingRiverColumns,
+    RankDatasDataProps,
+    rankingDatasColumns,
   } from "@/data/columns/product-weight";
   import { attribute, criteriaWP } from "@/data/criteria";
   import useDataset from "@/store/use-dataset";
   import { useEffect, useState } from "react";
-  import { River } from "type";
+  import { Datas } from "type";
   
   const useWeightProduct = () => {
-    const dataset = useDataset((store) => store.rivers);
+    const dataset = useDataset((store) => store.datas);
     const [calculateWeightData, setCalculateWeightData] = useState<
       WeightDataProps[]
     >([]);
@@ -19,9 +19,9 @@ import {
       WeightDataProps[]
     >([]);
     const [normalizeData, setNormalizeData] = useState<
-      (River & { valueS: number })[]
+      (Datas & { valueS: number })[]
     >([]);
-    const [rankData, setRankData] = useState<RankRiverDataProps[]>([]);
+    const [rankData, setRankData] = useState<RankDatasDataProps[]>([]);
   
     useEffect(() => {
       // Mencari total weight untuk dinormalisasi
@@ -85,7 +85,7 @@ import {
       console.log("Total value S", totalValueS);
   
       // Mencari nilai V
-      let newRankData = newNormalizeData.map<RankRiverDataProps>((item) => {
+      let newRankData = newNormalizeData.map<RankDatasDataProps>((item) => {
         return {
           ...item,
           rank: 1,
@@ -101,7 +101,7 @@ import {
       var ranks = newRankData.map(function (v) {
         return sorted.indexOf(v) + 1;
       });
-      newRankData = ranks.map<RankRiverDataProps>((rank, idx) => {
+      newRankData = ranks.map<RankDatasDataProps>((rank, idx) => {
         return {
           ...newRankData[idx],
           rank,
@@ -136,7 +136,7 @@ import {
         data: normalizeData,
       },
       rankData: {
-        columns: rankingRiverColumns,
+        columns: rankingDatasColumns,
         data: rankData,
       },
     };

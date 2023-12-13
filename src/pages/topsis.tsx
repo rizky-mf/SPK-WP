@@ -17,7 +17,7 @@ const chipMenu = [
 const TopsisPage = () => {
   useTitlePage("TOPSIS");
   const [activeChip, setActiveChip] = useState(chipMenu[0]);
-  const dataset = useDataset((store) => store.rivers);
+  const dataset = useDataset((store) => store.datas);
 
   return (
     <DashboardLayout title="TOPSIS Method">

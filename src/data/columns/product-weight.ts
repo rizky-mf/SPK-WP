@@ -1,5 +1,5 @@
 import { Column } from "react-table";
-import { River } from "type";
+import { Datas } from "type";
 import { attribute } from "../criteria";
 
 type WeightDataProps = {
@@ -8,7 +8,7 @@ type WeightDataProps = {
   value: number;
 };
 
-type RankRiverDataProps = Pick<River, "no" | "name"> & {
+type RankDatasDataProps = Pick<Datas, "no" | "name"> & {
   rank: number;
   total: number;
   valueV: number;
@@ -32,7 +32,7 @@ const calculateWeightColumns: ReadonlyArray<Column<WeightDataProps>> = [
   },
 ];
 
-const normalizeDataColumns: ReadonlyArray<Column<River & { valueS: number }>> =
+const normalizeDataColumns: ReadonlyArray<Column<Datas & { valueS: number }>> =
   [
     {
       Header: "No",
@@ -76,14 +76,14 @@ const normalizeDataColumns: ReadonlyArray<Column<River & { valueS: number }>> =
     },
   ];
 
-const rankingRiverColumns: ReadonlyArray<Column<RankRiverDataProps>> = [
+const rankingDatasColumns: ReadonlyArray<Column<RankDatasDataProps>> = [
   {
     Header: "No",
     accessor: "no",
     width: "10%",
   },
   {
-    Header: "River Name",
+    Header: "Nama",
     accessor: "name",
     width: "30%",
   },
@@ -104,5 +104,5 @@ const rankingRiverColumns: ReadonlyArray<Column<RankRiverDataProps>> = [
   },
 ];
 
-export { calculateWeightColumns, normalizeDataColumns, rankingRiverColumns };
-export type { WeightDataProps, RankRiverDataProps };
+export { calculateWeightColumns, normalizeDataColumns, rankingDatasColumns };
+export type { WeightDataProps, RankDatasDataProps };

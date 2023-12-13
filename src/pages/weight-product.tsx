@@ -40,7 +40,7 @@ const chipMenu = [
 const WeightProductPage = () => {
   useTitlePage("Weight Product");
   const [activeChip, setActiveChip] = useState(chipMenu[0]);
-  const dataset = useDataset((store) => store.rivers);
+  const dataset = useDataset((store) => store.datas);
   const calculate = useWeightProduct();
 
   console.log(calculate.normalizeData);
