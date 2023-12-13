@@ -6,3 +6,4 @@ Rizky Maolana Firdaus
 
 201011400134
 
+![Alt text](image.png)
