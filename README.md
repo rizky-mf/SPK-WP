@@ -1,4 +1,4 @@
-# Aplikasi Pemilihan Siswa Berprestasi
+# Aplikasi Sistem Pendukung Keputusan dalam Pemilihan Siswa Berprestasi
 
 Aplikasi masih dalam tahap pengembangan
 
