@@ -1,7 +1,7 @@
 import { Box, Divider, Heading, HStack, Text, VStack } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/react";
 import { BiData } from "react-icons/bi";
-import { FaGithub } from "react-icons/fa";
+// import { FaGithub } from "react-icons/fa";
 import { GiWeightCrush } from "react-icons/gi";
 import { IconType } from "react-icons/lib";
 import { useNavigate } from "react-location";
@@ -46,7 +46,7 @@ const Sidebar = () => {
       <Heading as="h3" fontSize="3xl" mb="2">
         Aplikasi SPK - Pemilihan Siswa Berprestasi - WP
       </Heading>
-      <Button
+      {/* <Button
         leftIcon={<FaGithub />}
         bg="white"
         color="blue.400"
@@ -60,7 +60,7 @@ const Sidebar = () => {
         >
           Source Code
         </a>
-      </Button>
+      </Button> */}
       <Divider my="4" />
       <Text textTransform="uppercase" opacity="75" mb="3" fontWeight="bold">
         Main
