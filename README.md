@@ -6,6 +6,8 @@ Rizky Maolana Firdaus
 
 201011400134
 
+[Title](<../../Downloads/TOPSIS - Rizky Maolana Firdaus - 201011400134.pdf>)
+
 ![Alt text](image-1.png)
 ![Alt text](image-2.png)
 ![Alt text](image-3.png)
