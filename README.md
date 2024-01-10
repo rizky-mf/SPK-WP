@@ -1,10 +1,7 @@
 # Aplikasi Sistem Pendukung Keputusan dalam Pemilihan Siswa Berprestasi
 
-Aplikasi masih dalam tahap pengembangan
+Aplikasi ini masih dalam tahap pengembangan
 
-Rizky Maolana Firdaus
-
-201011400134
 
 
 ![Alt text](image-1.png)
